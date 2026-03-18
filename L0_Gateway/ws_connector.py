@@ -2,10 +2,13 @@ import asyncio
 import json
 import logging
 import websockets
-from stream_normalizer import normalize
+from .stream_normalizer import normalize
 
 log = logging.getLogger(__name__)
-WS_BASE = "wss://testnet.binance.vision/ws"
+
+# Combined stream을 위한 Base URL (testnet 기준)
+# 주의: /ws 가 아니라 기본 도메인 뒤에 /stream?streams= 가 붙어야 합니다.
+WS_BASE = "wss://testnet.binance.vision"
 
 async def connect_with_retry(symbols, ring_buffer, max_retries=10):
     retry_delay = 1  # 초기 1초, 최대 60초까지 지수 백오프
