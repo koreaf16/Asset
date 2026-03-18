@@ -1,0 +1,6 @@
+코더에게 업무를 시킬 때 이 순서를 추천합니다:
+먼저 읽어야 할 것: 00_INDEX.md(전체 맵) → 01_ARCHITECTURE.md(큰 그림) → 03_VECTOR_DESIGN.md(핵심 데이터 구조)
+구현 순서: 02_SCHEMA.md + schema_v1.2.sql(DB부터 만들고) → 04_L0_GATEWAY.md(데이터 수신) → 05_L1_FEATURE_ENGINE.md(피처 계산) → 여기까지 돌리면서 데이터 쌓고 → 10_FEE_AND_LABELING.md(라벨링 배치) → 06_L2_STRATEGY_ENGINE.md(패턴 매칭) → 07_L3_EXECUTION.md(모의거래)
+병렬 작업 가능: 08_DATA_PIPELINE.md(외부 API)와 09_GPU_PIPELINE.md(GPU 서빙)은 Phase 2~4와 동시에 진행 가능합니다.
+마지막: 11_UI_SPEC.md(화면) → 12_ROADMAP.md의 Phase 7(검증 + 튜닝)
+12_ROADMAP.md에 전체 체크리스트가 있으니 진행 상황 추적용으로 활용하시면 됩니다.
